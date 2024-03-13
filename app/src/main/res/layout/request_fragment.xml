@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutRequestCategory"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:weightSum="@integer/int_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonRequested"
+            style="@style/RequestToggleButtonStyle"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_weight="@integer/int_1"
+            android:maxLines="@integer/int_1"
+            android:minLines="@integer/int_1"
+            android:text="@string/btn_requested" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAccepted"
+            style="@style/RequestToggleButtonStyle"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_weight="@integer/int_1"
+            android:maxLines="@integer/int_1"
+            android:minLines="@integer/int_1"
+            android:text="@string/label_accepted" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCompleted"
+            style="@style/RequestToggleButtonStyle"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="@integer/int_1"
+            android:maxLines="@integer/int_1"
+            android:minLines="@integer/int_1"
+            android:text="@string/btn_completed" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRequestList"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:paddingBottom="@dimen/_20sdp"
+        android:paddingTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutRequestCategory"
+        tools:listitem="@layout/item_request_row" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

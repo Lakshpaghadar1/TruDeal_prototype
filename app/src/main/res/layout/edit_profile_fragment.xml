@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_20sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewProfile"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/Widget.AppCompat.ShapeableImageView.CornerSize10"
+                app:srcCompat="@drawable/dummy_image_listing" />
+
+            <View
+                android:id="@+id/editBg"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                android:background="@drawable/bg_edit"
+                app:layout_constraintBottom_toBottomOf="@id/textViewEdit"
+                app:layout_constraintEnd_toEndOf="@id/imageViewProfile"
+                app:layout_constraintStart_toStartOf="@id/imageViewProfile"
+                app:layout_constraintTop_toTopOf="@id/textViewEdit" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewEdit"
+                style="@style/Regular.10ssp.C_FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_edit"
+                android:drawablePadding="@dimen/_4sdp"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_3sdp"
+                android:paddingVertical="@dimen/_3sdp"
+                android:text="@string/label_edit"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewProfile"
+                app:layout_constraintEnd_toEndOf="@id/imageViewProfile"
+                app:layout_constraintStart_toStartOf="@id/imageViewProfile" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextUserName"
+                style="@style/AuthEditTextStyle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:drawableStart="@drawable/ic_user"
+                android:hint="@string/hint_username"
+                android:maxLength="@integer/int_username_max_length"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewProfile" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextFirstName"
+                style="@style/AuthEditTextStyle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:drawableStart="@drawable/ic_user"
+                android:hint="@string/hint_first_name"
+                app:layout_constraintEnd_toEndOf="@id/editTextUserName"
+                app:layout_constraintStart_toStartOf="@id/editTextUserName"
+                app:layout_constraintTop_toBottomOf="@id/editTextUserName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextLastName"
+                style="@style/AuthEditTextStyle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:drawableStart="@drawable/ic_user"
+                android:hint="@string/hint_last_name"
+                app:layout_constraintEnd_toEndOf="@id/editTextUserName"
+                app:layout_constraintStart_toStartOf="@id/editTextUserName"
+                app:layout_constraintTop_toBottomOf="@id/editTextFirstName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextEmailId"
+                style="@style/AuthEditTextStyle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="@string/hint_email_id"
+                app:layout_constraintEnd_toEndOf="@id/editTextUserName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextLastName" />
+
+            <include
+                android:id="@+id/layoutPhoneNumber"
+                layout="@layout/layout_phone_number"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/editTextUserName"
+                app:layout_constraintStart_toStartOf="@id/editTextEmailId"
+                app:layout_constraintTop_toBottomOf="@id/editTextEmailId" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextAddress"
+                style="@style/AuthEditTextStyle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:drawableStart="@drawable/ic_address"
+                android:hint="@string/hint_address"
+                android:imeOptions="actionDone"
+                app:layout_constraintEnd_toEndOf="@id/editTextUserName"
+                app:layout_constraintStart_toStartOf="@id/editTextUserName"
+                app:layout_constraintTop_toBottomOf="@id/layoutPhoneNumber" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSave"
+                style="@style/AppButtonCustomStyle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/btn_save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/editTextUserName"
+                app:layout_constraintStart_toStartOf="@id/editTextUserName"
+                app:layout_constraintTop_toBottomOf="@id/editTextAddress"
+                app:layout_constraintVertical_bias="@integer/int_1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

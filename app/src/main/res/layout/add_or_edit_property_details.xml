@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextTitle"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:drawableStart="@drawable/ic_title"
+            android:hint="@string/hint_listing_headline"
+            android:imeOptions="actionDone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewMakeFeaturedDeal"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/label_make_your_deal_a_featured_deal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/editTextTitle" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkboxMakeDealFeatured"
+            style="@style/Regular.10ssp.C_A5A5A5"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:button="@drawable/selector_checkbox"
+            android:gravity="top"
+            android:paddingStart="@dimen/_9sdp"
+            android:paddingEnd="@dimen/dp_0"
+            android:text="@string/label_allow_to_make_deal_featured"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/textViewMakeFeaturedDeal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUploadImages"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_upload_property_images"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/checkboxMakeDealFeatured" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewImages"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUploadImages"
+            tools:itemCount="@integer/int_3"
+            tools:listitem="@layout/item_add_property_images" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonUploadImages"
+            style="@style/AddPropertyDetailsButtonStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/btn_upload"
+            app:icon="@drawable/ic_add_or_upload_media"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewImages" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUploadVideo"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_upload_video_mp4_mov"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/buttonUploadImages" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutUploadVideo"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/bg_upload_media_opacity"
+            android:padding="@dimen/_1sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadVideo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadVideo"
+            app:layout_constraintTop_toBottomOf="@id/textViewUploadVideo">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewVideo"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/Widget.AppCompat.ShapeableImageView.CornerSize5"
+                tools:srcCompat="@drawable/dummy_image_media" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewDeleteVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_7sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_delete_media" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewReUploadVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_7sdp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewDeleteVideo"
+                app:layout_constraintEnd_toStartOf="@id/imageViewDeleteVideo"
+                app:layout_constraintHorizontal_bias="@integer/int_1"
+                app:layout_constraintStart_toEndOf="@id/imageViewVideo"
+                app:layout_constraintTop_toTopOf="@id/imageViewDeleteVideo"
+                app:srcCompat="@drawable/ic_reupload" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonUploadVideo"
+            style="@style/AddPropertyDetailsButtonStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/btn_upload"
+            app:icon="@drawable/ic_add_or_upload_media"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutUploadVideo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUploadBrochure"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_upload_brochure_pdf_only"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/buttonUploadVideo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDocuments"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUploadBrochure"
+            tools:itemCount="@integer/int_3"
+            tools:listitem="@layout/item_add_property_images" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonUploadBrochure"
+            style="@style/AddPropertyDetailsButtonStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/btn_upload"
+            app:icon="@drawable/ic_add_or_upload_media"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewDocuments" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTotalBeds"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_total_beds"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/buttonUploadBrochure" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextSelectBeds"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableStart="@drawable/ic_bed_orange"
+            android:drawableEnd="@drawable/ic_down_arrow_orange"
+            android:focusable="false"
+            android:hint="@string/hint_select"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTotalBeds" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTotalBaths"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_total_baths"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/editTextSelectBeds" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextSelectBaths"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableStart="@drawable/ic_bathtub_orange"
+            android:drawableEnd="@drawable/ic_down_arrow_orange"
+            android:focusable="false"
+            android:hint="@string/hint_select"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTotalBaths" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewGarageSize"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_garage_size"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/editTextSelectBaths" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextSelectGarageSize"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableStart="@drawable/ic_garage_orange"
+            android:drawableEnd="@drawable/ic_down_arrow_orange"
+            android:focusable="false"
+            android:hint="@string/hint_select"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewGarageSize" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTotalArea"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_total_area"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/editTextSelectGarageSize" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextArea"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@null"
+            android:drawableStart="@drawable/ic_measurement_tools_orange"
+            android:hint="@string/hint_type_here"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/dp_0"
+            android:paddingBottom="@dimen/_7sdp"
+            app:layout_constraintEnd_toStartOf="@id/editTextSelectAreaUnit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTotalArea" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextSelectAreaUnit"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@null"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableEnd="@drawable/ic_down_arrow_orange"
+            android:focusable="false"
+            android:hint="@string/hint_select"
+            android:inputType="none"
+            android:paddingBottom="@dimen/_7sdp"
+            android:text="@string/label_sq_ft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/editTextArea"
+            app:layout_constraintTop_toBottomOf="@id/textViewTotalArea" />
+
+        <View
+            android:id="@+id/viewLineArea"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:background="@drawable/bg_edittext"
+            app:layout_constraintEnd_toEndOf="@id/editTextSelectAreaUnit"
+            app:layout_constraintStart_toStartOf="@id/editTextArea"
+            app:layout_constraintTop_toBottomOf="@id/editTextArea" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewBuiltYear"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="@string/label_built_year"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/viewLineArea" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextBuiltYear"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableStart="@drawable/ic_built_year_orange"
+            android:focusable="false"
+            android:hint="@string/hint_select"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBuiltYear" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPropertyType"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_property_type"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/editTextBuiltYear" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextSelectPropertyType"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableStart="@drawable/ic_property_type_orange"
+            android:drawableEnd="@drawable/ic_down_arrow_orange"
+            android:focusable="false"
+            android:hint="@string/hint_select"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPropertyType" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewAddress"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_address"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/editTextSelectPropertyType" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextAddress"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_address_outlined"
+            android:hint="@string/hint_type_here"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewAddress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDescription"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_description"
+            app:layout_constraintEnd_toStartOf="@id/descriptionCounter"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/editTextAddress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/descriptionCounter"
+            style="@style/Regular.8ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/x_out_of_8000"
+            app:layout_constraintBottom_toBottomOf="@id/textViewDescription"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toEndOf="@id/textViewDescription"
+            app:layout_constraintTop_toTopOf="@id/textViewDescription" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDescription"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:gravity="top"
+            android:hint="@string/hint_type_here"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:lines="@integer/int_5"
+            android:nestedScrollingEnabled="true"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/dp_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescription" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewDescriptionIc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="@id/textViewDescription"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescription"
+            app:srcCompat="@drawable/ic_description_orange" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPrice"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_price"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/editTextDescription" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextPrice"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_price_orange"
+            android:drawableEnd="@drawable/ic_dollar_orange"
+            android:hint="@string/hint_add_price"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPrice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewMetaKeyword"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_meta_keyword"
+            app:layout_constraintEnd_toEndOf="@id/editTextTitle"
+            app:layout_constraintStart_toStartOf="@id/editTextTitle"
+            app:layout_constraintTop_toBottomOf="@id/editTextPrice" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextMetaKeyword"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_link_orange"
+            android:hint="@string/hint_enter_your_properties_keywords"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewMetaKeyword" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonPreview"
+            style="@style/AppOutlinedButtonCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/label_preview"
+            app:layout_constraintEnd_toEndOf="@id/editTextMetaKeyword"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/editTextMetaKeyword"
+            app:layout_constraintTop_toBottomOf="@id/editTextMetaKeyword"
+            app:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSave"
+            style="@style/AppButtonCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/btn_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/buttonPreview"
+            app:layout_constraintStart_toStartOf="@id/buttonPreview"
+            app:layout_constraintTop_toBottomOf="@id/buttonPreview"
+            app:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonNext"
+            style="@style/AppButtonCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/btn_next"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/editTextMetaKeyword"
+            app:layout_constraintStart_toStartOf="@id/editTextMetaKeyword"
+            app:layout_constraintTop_toBottomOf="@id/editTextMetaKeyword"
+            app:textAllCaps="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

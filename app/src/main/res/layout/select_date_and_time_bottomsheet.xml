@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_top_round_rect_white_radius_20">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewSelectTitle"
+        style="@style/SemiBold.12ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center"
+        android:text="@string/label_select_a_showing_date_and_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@color/C_F1F1F1"
+        app:layout_constraintEnd_toEndOf="@id/textViewSelectTitle"
+        app:layout_constraintStart_toStartOf="@id/textViewSelectTitle"
+        app:layout_constraintTop_toBottomOf="@id/textViewSelectTitle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_20sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewSelectDate"
+                style="@style/SemiBold.10ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/label_select_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.marcohc.robotocalendar.RobotoCalendarView
+                android:id="@+id/customCal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewSelectDate" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewStartTime"
+                style="@style/SemiBold.10ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:text="@string/label_start_time"
+                app:layout_constraintEnd_toEndOf="@id/textViewSelectDate"
+                app:layout_constraintStart_toStartOf="@id/textViewSelectDate"
+                app:layout_constraintTop_toBottomOf="@id/customCal" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutStartTime"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@id/textViewStartTime"
+                app:layout_constraintStart_toStartOf="@id/textViewStartTime"
+                app:layout_constraintTop_toBottomOf="@id/textViewStartTime">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewStartTimeHour"
+                    style="@style/Bold.12ssp.C_000000"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:background="@drawable/bg_selected_time"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    app:layout_constraintEnd_toStartOf="@id/startTimeDivider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="10 h" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/startTimeDivider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:background="@drawable/ic_time_divider"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewStartTimeHour"
+                    app:layout_constraintEnd_toStartOf="@id/textViewStartTimeMinute"
+                    app:layout_constraintStart_toEndOf="@id/textViewStartTimeHour"
+                    app:layout_constraintTop_toTopOf="@id/textViewStartTimeHour" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewStartTimeMinute"
+                    style="@style/Bold.12ssp.C_000000"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_selected_time"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewStartTimeHour"
+                    app:layout_constraintEnd_toStartOf="@id/textViewStartTimeAM"
+                    app:layout_constraintStart_toEndOf="@id/startTimeDivider"
+                    app:layout_constraintTop_toTopOf="@id/textViewStartTimeHour"
+                    tools:text="10 m" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewStartTimeAM"
+                    style="@style/SemiBold.10ssp.C_000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/label_am"
+                    android:textColor="@color/am_pm_text_color_selector"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textViewStartTimeMinute"
+                    app:layout_constraintTop_toTopOf="@id/textViewStartTimeHour" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewStartTimePM"
+                    style="@style/SemiBold.10ssp.C_000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/label_pm"
+                    android:textColor="@color/am_pm_text_color_selector"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewStartTimeMinute"
+                    app:layout_constraintEnd_toEndOf="@id/textViewStartTimeAM"
+                    app:layout_constraintStart_toStartOf="@id/textViewStartTimeAM"
+                    app:layout_constraintTop_toBottomOf="@id/textViewStartTimeAM" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewEndTime"
+                style="@style/SemiBold.10ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/label_end_time"
+                app:layout_constraintEnd_toEndOf="@id/textViewSelectDate"
+                app:layout_constraintStart_toStartOf="@id/textViewSelectDate"
+                app:layout_constraintTop_toBottomOf="@id/linearLayoutStartTime" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutEndTime"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEndTime"
+                app:layout_constraintStart_toStartOf="@id/textViewEndTime"
+                app:layout_constraintTop_toBottomOf="@id/textViewEndTime">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewEndTimeHour"
+                    style="@style/Bold.12ssp.C_000000"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:background="@drawable/bg_selected_time"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    app:layout_constraintEnd_toStartOf="@id/endTimeDivider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="10 h" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/endTimeDivider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:background="@drawable/ic_time_divider"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewEndTimeHour"
+                    app:layout_constraintEnd_toStartOf="@id/textViewEndTimeMinute"
+                    app:layout_constraintStart_toEndOf="@id/textViewEndTimeHour"
+                    app:layout_constraintTop_toTopOf="@id/textViewEndTimeHour" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewEndTimeMinute"
+                    style="@style/Bold.12ssp.C_000000"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_selected_time"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewEndTimeHour"
+                    app:layout_constraintEnd_toStartOf="@id/textViewEndTimeAM"
+                    app:layout_constraintStart_toEndOf="@id/endTimeDivider"
+                    app:layout_constraintTop_toTopOf="@id/textViewEndTimeHour"
+                    tools:text="10 m" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewEndTimeAM"
+                    style="@style/SemiBold.10ssp.C_000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/label_am"
+                    android:textColor="@color/am_pm_text_color_selector"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textViewEndTimeMinute"
+                    app:layout_constraintTop_toTopOf="@id/textViewEndTimeHour" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewEndTimePM"
+                    style="@style/SemiBold.10ssp.C_000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/label_pm"
+                    android:textColor="@color/am_pm_text_color_selector"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewEndTimeMinute"
+                    app:layout_constraintEnd_toEndOf="@id/textViewEndTimeAM"
+                    app:layout_constraintStart_toStartOf="@id/textViewEndTimeAM"
+                    app:layout_constraintTop_toBottomOf="@id/textViewEndTimeAM" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonNext"
+                style="@style/AppButtonCustomStyle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="@string/btn_next"
+                app:layout_constraintEnd_toEndOf="@id/textViewSelectDate"
+                app:layout_constraintStart_toStartOf="@id/textViewSelectDate"
+                app:layout_constraintTop_toBottomOf="@id/linearLayoutEndTime" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/label_cancel"
+                app:layout_constraintEnd_toEndOf="@id/textViewSelectDate"
+                app:layout_constraintStart_toStartOf="@id/textViewSelectDate"
+                app:layout_constraintTop_toBottomOf="@id/buttonNext" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

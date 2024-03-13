@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewBusinessName"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/label_business_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextBusinessName"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableStart="@drawable/ic_suitcase"
+            android:drawableEnd="@drawable/ic_locked"
+            android:focusable="false"
+            android:hint="@string/hint_type_here"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBusinessName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDealTitle"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_deal_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextBusinessName" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDealTitle"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:drawableStart="@drawable/ic_deal_title"
+            android:hint="@string/hint_deal_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDealDescription"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_deal_description"
+            app:layout_constraintEnd_toStartOf="@id/dealDescriptionCounter"
+            app:layout_constraintStart_toStartOf="@id/editTextBusinessName"
+            app:layout_constraintTop_toBottomOf="@id/editTextDealTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dealDescriptionCounter"
+            style="@style/Regular.8ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/x_out_of_8000"
+            app:layout_constraintBottom_toBottomOf="@id/textViewDealDescription"
+            app:layout_constraintEnd_toEndOf="@id/editTextBusinessName"
+            app:layout_constraintStart_toEndOf="@id/textViewDealDescription"
+            app:layout_constraintTop_toTopOf="@id/textViewDealDescription" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDealDescription"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:gravity="top"
+            android:hint="@string/hint_type_here"
+            android:inputType="textMultiLine"
+            android:lines="@integer/int_3"
+            android:nestedScrollingEnabled="true"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/dp_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealDescription" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewDealDescriptionIc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            app:layout_constraintStart_toStartOf="@id/textViewDealDescription"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealDescription"
+            app:srcCompat="@drawable/ic_description_orange" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDealTCDescription"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_deal_terms_and_conditions"
+            app:layout_constraintEnd_toStartOf="@id/dealDescriptionCounter"
+            app:layout_constraintStart_toStartOf="@id/editTextBusinessName"
+            app:layout_constraintTop_toBottomOf="@id/editTextDealDescription" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dealTCDescriptionCounter"
+            style="@style/Regular.8ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/x_out_of_8000"
+            app:layout_constraintBottom_toBottomOf="@id/textViewDealTCDescription"
+            app:layout_constraintEnd_toEndOf="@id/editTextBusinessName"
+            app:layout_constraintStart_toEndOf="@id/textViewDealTCDescription"
+            app:layout_constraintTop_toTopOf="@id/textViewDealTCDescription" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDealTCDescription"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:gravity="top"
+            android:hint="@string/hint_type_here"
+            android:inputType="textMultiLine"
+            android:lines="@integer/int_3"
+            android:nestedScrollingEnabled="true"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/dp_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealTCDescription" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewDealTCDescriptionIc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            app:layout_constraintStart_toStartOf="@id/textViewDealTCDescription"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealTCDescription"
+            app:srcCompat="@drawable/ic_description_orange" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewMakeFeaturedDeal"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/label_make_your_deal_a_featured_deal"
+            app:layout_constraintEnd_toEndOf="@id/textViewBusinessName"
+            app:layout_constraintStart_toStartOf="@id/textViewBusinessName"
+            app:layout_constraintTop_toBottomOf="@id/editTextDealTCDescription" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkboxMakeDealFeatured"
+            style="@style/Regular.10ssp.C_A5A5A5"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:button="@drawable/selector_checkbox"
+            android:gravity="top"
+            android:paddingStart="@dimen/_9sdp"
+            android:paddingEnd="@dimen/dp_0"
+            android:text="@string/label_allow_to_make_deal_featured"
+            app:layout_constraintEnd_toEndOf="@id/textViewBusinessName"
+            app:layout_constraintStart_toStartOf="@id/textViewBusinessName"
+            app:layout_constraintTop_toBottomOf="@id/textViewMakeFeaturedDeal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDealCategory"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_deal_category"
+            app:layout_constraintEnd_toEndOf="@id/textViewBusinessName"
+            app:layout_constraintStart_toStartOf="@id/textViewBusinessName"
+            app:layout_constraintTop_toBottomOf="@id/checkboxMakeDealFeatured" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDealCategory"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:drawableStart="@drawable/ic_bullet_lines"
+            android:hint="@string/hint_deal_category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealCategory" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDealCity"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_city"
+            app:layout_constraintEnd_toEndOf="@id/textViewBusinessName"
+            app:layout_constraintStart_toStartOf="@id/textViewBusinessName"
+            app:layout_constraintTop_toBottomOf="@id/editTextDealCategory" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDealCity"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:drawableStart="@drawable/ic_description_orange"
+            android:hint="@string/hint_city"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealCity" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDealState"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_state"
+            app:layout_constraintEnd_toEndOf="@id/textViewBusinessName"
+            app:layout_constraintStart_toStartOf="@id/textViewBusinessName"
+            app:layout_constraintTop_toBottomOf="@id/editTextDealCity" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDealState"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:drawableStart="@drawable/ic_description_orange"
+            android:hint="@string/hint_state"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealState" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUploadImages"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_upload_images"
+            app:layout_constraintEnd_toEndOf="@id/textViewBusinessName"
+            app:layout_constraintStart_toStartOf="@id/textViewBusinessName"
+            app:layout_constraintTop_toBottomOf="@id/editTextDealState" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewImages"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUploadImages"
+            tools:itemCount="@integer/int_3"
+            tools:listitem="@layout/item_add_property_images" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonUploadImages"
+            style="@style/AddPropertyDetailsButtonStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/btn_upload"
+            app:icon="@drawable/ic_add_or_upload_media"
+            app:layout_constraintEnd_toEndOf="@id/textViewBusinessName"
+            app:layout_constraintStart_toStartOf="@id/textViewBusinessName"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewImages" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutSelectDuration"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:layout_constraintBottom_toTopOf="@id/textViewNoOfDeals"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonUploadImages">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewStartDate"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_2sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cardViewEndAndTimeDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewStartDateAndTime"
+                        style="@style/SemiBold.9ssp.C_FFFFFF"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:background="@color/C_ED1D26"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/_30sdp"
+                        android:paddingVertical="@dimen/_7sdp"
+                        android:text="@string/label_start_date_time"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="@id/textViewStartDateAndTime"
+                        app:layout_constraintStart_toStartOf="@id/textViewStartDateAndTime"
+                        app:layout_constraintTop_toBottomOf="@id/textViewStartDateAndTime">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewStartDateIs"
+                            style="@style/Bold.10ssp.C_000000"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_3sdp"
+                            android:text="14 Jan 2022"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewStartTimeIs"
+                            style="@style/Regular.10ssp.C_000000"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_3sdp"
+                            android:text="03:00 PM"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textViewStartDateIs" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewEndAndTimeDate"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_2sdp"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cardViewStartDate"
+                app:layout_constraintTop_toTopOf="@id/cardViewStartDate">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewEndDate"
+                        style="@style/SemiBold.9ssp.C_FFFFFF"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:background="@color/C_ED1D26"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/_30sdp"
+                        android:paddingVertical="@dimen/_7sdp"
+                        android:text="@string/label_end_date_time"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="@id/textViewEndDate"
+                        app:layout_constraintStart_toStartOf="@id/textViewEndDate"
+                        app:layout_constraintTop_toBottomOf="@id/textViewEndDate">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewEndDateIs"
+                            style="@style/Bold.10ssp.C_000000"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_3sdp"
+                            android:text="27 Jan 2022"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewEndTimeIs"
+                            style="@style/Regular.10ssp.C_000000"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_3sdp"
+                            android:text="12:00 PM"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textViewEndDateIs" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewNoOfDeals"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_number_of_deals_offered"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutSelectDuration" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextNoOfDeals"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_description_orange"
+            android:hint="@string/hint_type_here"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewNoOfDeals" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewRetailValue"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_retail_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextNoOfDeals" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextRetailValue"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:digits="0123456789"
+            android:drawableStart="@drawable/ic_description_orange"
+            android:drawableEnd="@drawable/ic_dollar_orange"
+            android:hint="@string/hint_type_here"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewRetailValue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDealPrice"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="24dp"
+            android:text="@string/label_deal_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextRetailValue" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextDealPrice"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:digits="0123456789"
+            android:drawableStart="@drawable/ic_description_orange"
+            android:drawableEnd="@drawable/ic_dollar_orange"
+            android:hint="@string/hint_type_here"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealPrice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPercentageOff"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_percentage_off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextDealPrice" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextPercentageOff"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:digits="0123456789"
+            android:drawableStart="@drawable/ic_description_orange"
+            android:drawableEnd="@drawable/ic_percentage"
+            android:focusable="false"
+            android:hint="@string/hint_type_here"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPercentageOff" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTypeOfDeal"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_type_of_deal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextPercentageOff" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextSelectTypeOfDeal"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableStart="@drawable/ic_description_orange"
+            android:drawableEnd="@drawable/ic_down_arrow_orange"
+            android:focusable="false"
+            android:hint="@string/hint_select"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTypeOfDeal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPromoCode"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_promocode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextSelectTypeOfDeal" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextPromoCode"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:digits="@string/alphabets_and_numbers"
+            android:drawableStart="@drawable/ic_description_orange"
+            android:hint="@string/hint_promocode_here"
+            android:imeOptions="actionNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPromoCode" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupPromocode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="textViewPromoCode, editTextPromoCode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewShoppingCartUrl"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_shopping_cart_url"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextPromoCode" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextShoppingCartUrl"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:drawableStart="@drawable/ic_description_orange"
+            android:hint="@string/label_url_here"
+            android:imeOptions="actionDone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewShoppingCartUrl" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupShoppingCartUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="textViewShoppingCartUrl, editTextShoppingCartUrl" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonPreview"
+            style="@style/AppOutlinedButtonCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/label_preview"
+            app:layout_constraintEnd_toEndOf="@id/editTextSelectTypeOfDeal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/editTextSelectTypeOfDeal"
+            app:layout_constraintTop_toBottomOf="@id/editTextShoppingCartUrl"
+            app:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSave"
+            style="@style/AppButtonCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/btn_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/buttonPreview"
+            app:layout_constraintStart_toStartOf="@id/buttonPreview"
+            app:layout_constraintTop_toBottomOf="@id/buttonPreview"
+            app:textAllCaps="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

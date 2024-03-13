@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C_4DECECEC">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                style="@style/SemiBold.14ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/label_select_a_subscription_plan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewDescription"
+                style="@style/Regular.10ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="@string/label_choose_a_plan_that_s_right_for_you"
+                app:layout_constraintEnd_toEndOf="@id/textViewTitle"
+                app:layout_constraintStart_toStartOf="@id/textViewTitle"
+                app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPayOnlyWhen"
+                style="@style/Regular.10ssp.C_9D9D9D"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/label_pay_only_when_you_see_the_app_you_can_cancel_the_subscription"
+                app:layout_constraintEnd_toEndOf="@id/textViewTitle"
+                app:layout_constraintStart_toStartOf="@id/textViewTitle"
+                app:layout_constraintTop_toBottomOf="@id/textViewDescription" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSubOptions"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewPayOnlyWhen"
+                app:spanCount="@integer/int_3"
+                tools:itemCount="@integer/int_3"
+                tools:listitem="@layout/item_subscription_card" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewDescriptionPoints"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_0"
+                app:spanCount="@integer/int_2"
+                android:paddingEnd="@dimen/_15sdp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewSubOptions"
+                tools:listitem="@layout/item_subscription_description_points" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonProceedToPayment"
+                style="@style/AppMaterialFilledButtonCustomStyle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="@string/btn_proceed_to_payment"
+                app:backgroundTint="@color/C_ED1D26"
+                app:icon="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/textViewTitle"
+                app:layout_constraintStart_toStartOf="@id/textViewTitle"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewDescriptionPoints"
+                app:layout_constraintVertical_bias="@integer/int_1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

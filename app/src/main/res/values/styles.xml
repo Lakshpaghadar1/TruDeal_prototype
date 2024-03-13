@@ -1,0 +1,1036 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/layer_list_splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="TransparentProgressDialog">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="DialogStyle" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingTop">@dimen/dp_0</item>
+        <item name="android:paddingBottom">@dimen/dp_0</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:drawablePadding">@dimen/_7sdp</item>
+
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="fontFamily">@font/circular_std_book</item>
+        <item name="android:fontFamily">@font/circular_std_book</item>
+        <item name="android:textColor">@color/navyBlue</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="RecyclerViewStyle">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <style name="NestedScrollViewStyle">
+        <item name="android:fillViewport">true</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <!-- Fonts -->
+    <style name="regular">
+        <item name="fontFamily">@font/circular_std_book</item>
+        <item name="android:fontFamily">@font/circular_std_book</item>
+    </style>
+
+    <style name="regular.14">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="lineHeight">@dimen/_18ssp</item>
+    </style>
+
+    <style name="regular.14.gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="regular.14.navyBlue">
+        <item name="android:textColor">@color/navyBlue</item>
+    </style>
+
+    <style name="regular.16">
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="regular.16.navyBlue">
+        <item name="android:textColor">@color/navyBlue</item>
+    </style>
+
+    <style name="bold">
+        <item name="fontFamily">@font/circular_std_bold</item>
+        <item name="android:fontFamily">@font/circular_std_bold</item>
+    </style>
+
+    <style name="bold.10">
+        <item name="android:textSize">@dimen/_8ssp</item>
+    </style>
+
+    <style name="bold.10.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="bold.18">
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="bold.18.navyBlue">
+        <item name="android:textColor">@color/navyBlue</item>
+    </style>
+
+    <style name="medium">
+        <item name="fontFamily">@font/circular_std_medium</item>
+        <item name="android:fontFamily">@font/circular_std_medium</item>
+    </style>
+
+    <style name="medium.14">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="lineHeight">@dimen/_16ssp</item>
+    </style>
+
+    <style name="medium.14.gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+
+    <!-- Fonts Cerebri-->
+    <!-- Fonts Cerebri Regular-->
+    <style name="Regular">
+        <item name="fontFamily">@font/cerebri_sans_regular</item>
+        <item name="android:fontFamily">@font/cerebri_sans_regular</item>
+    </style>
+
+    <style name="Regular.6ssp">
+        <item name="android:textSize">@dimen/_6ssp</item>
+    </style>
+
+    <style name="Regular.6ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Regular.6ssp.C_6F6DCA">
+        <item name="android:textColor">@color/C_6F6DCA</item>
+    </style>
+
+    <style name="Regular.7ssp">
+        <item name="android:textSize">@dimen/_7ssp</item>
+    </style>
+
+    <style name="Regular.7ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Regular.7ssp.C_6F6DCA">
+        <item name="android:textColor">@color/C_6F6DCA</item>
+    </style>
+
+
+    <style name="Regular.8ssp">
+        <item name="android:textSize">@dimen/_8ssp</item>
+    </style>
+
+    <style name="Regular.8ssp.C_8D8D8D">
+        <item name="android:textColor">@color/C_8D8D8D</item>
+    </style>
+
+    <style name="Regular.8ssp.C_AFAFAF">
+        <item name="android:textColor">@color/C_AFAFAF</item>
+    </style>
+
+    <style name="Regular.8ssp.C_9D9D9D">
+        <item name="android:textColor">@color/C_9D9D9D</item>
+    </style>
+
+    <style name="Regular.8ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Regular.8ssp.C_808080">
+        <item name="android:textColor">@color/C_808080</item>
+    </style>
+
+    <style name="Regular.8ssp.C_6F6DCA">
+        <item name="android:textColor">@color/C_6F6DCA</item>
+    </style>
+
+    <style name="Regular.8ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+        <item name="lineHeight">@dimen/_12sdp</item>
+    </style>
+
+    <style name="Regular.9ssp">
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
+
+    <style name="Regular.9ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Regular.9ssp.C_6F6DCA">
+        <item name="android:textColor">@color/C_6F6DCA</item>
+    </style>
+
+    <style name="Regular.9ssp.C_9D9D9D">
+        <item name="android:textColor">@color/C_9D9D9D</item>
+    </style>
+
+    <style name="Regular.9ssp.C_A5A5A5">
+        <item name="android:textColor">@color/C_A5A5A5</item>
+    </style>
+
+    <style name="Regular.9ssp.C_5C5C5C">
+        <item name="android:textColor">@color/C_5C5C5C</item>
+    </style>
+
+    <style name="Regular.9ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+        <item name="lineHeight">@dimen/_12sdp</item>
+    </style>
+
+    <style name="Regular.9ssp.C_808080">
+        <item name="android:textColor">@color/C_808080</item>
+        <item name="lineHeight">@dimen/_8sdp</item>
+    </style>
+
+    <style name="Regular.10ssp">
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="Regular.10ssp.C_6F6DCA">
+        <item name="android:textColor">@color/C_6F6DCA</item>
+    </style>
+
+    <style name="Regular.10ssp.C_6F6F6F">
+        <item name="android:textColor">@color/C_6F6F6F</item>
+    </style>
+
+    <style name="Regular.10ssp.C_5C5C5C">
+        <item name="android:textColor">@color/C_5C5C5C</item>
+    </style>
+
+    <style name="Regular.10ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Regular.10ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Regular.10ssp.C_A5A5A5">
+        <item name="android:textColor">@color/C_A5A5A5</item>
+    </style>
+
+    <style name="Regular.10ssp.C_9D9D9D">
+        <item name="android:textColor">@color/C_9D9D9D</item>
+    </style>
+
+    <style name="Regular.10ssp.C_A0A7AB">
+        <item name="android:textColor">@color/C_A0A7AB</item>
+    </style>
+
+    <style name="Regular.10ssp.C_8D8D8D">
+        <item name="android:textColor">@color/C_8D8D8D</item>
+    </style>
+
+    <style name="Regular.10ssp.C_808080">
+        <item name="android:textColor">@color/C_808080</item>
+    </style>
+
+    <style name="Regular.10ssp.C_ED1D26">
+        <item name="android:textColor">@color/C_ED1D26</item>
+    </style>
+
+    <style name="Regular.11ssp">
+        <item name="android:textSize">@dimen/_11ssp</item>
+    </style>
+
+    <style name="Regular.11ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Regular.11ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Regular.12ssp">
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="Regular.12ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Fonts Cerebri SemiBold-->
+    <style name="SemiBold">
+        <item name="fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_semi_bold</item>
+    </style>
+
+    <style name="SemiBold.5ssp">
+        <item name="android:textSize">@dimen/_5ssp</item>
+    </style>
+
+    <style name="SemiBold.5ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SemiBold.6ssp">
+        <item name="android:textSize">@dimen/_6ssp</item>
+    </style>
+
+    <style name="SemiBold.6ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SemiBold.7ssp">
+        <item name="android:textSize">@dimen/_7ssp</item>
+    </style>
+
+    <style name="SemiBold.7ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SemiBold.8ssp">
+        <item name="android:textSize">@dimen/_8ssp</item>
+    </style>
+
+    <style name="SemiBold.8ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SemiBold.8ssp.C_7D7D7D">
+        <item name="android:textColor">@color/C_7D7D7D</item>
+    </style>
+
+    <style name="SemiBold.8ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SemiBold.8ssp.C_ED1D26">
+        <item name="android:textColor">@color/C_ED1D26</item>
+    </style>
+
+    <style name="SemiBold.8sspLH">
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="lineHeight">@dimen/_15sdp</item>
+    </style>
+
+    <style name="SemiBold.8sspLH.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SemiBold.9ssp">
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
+
+    <style name="SemiBold.9ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SemiBold.9ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SemiBold.9ssp.C_ED1D26">
+        <item name="android:textColor">@color/C_ED1D26</item>
+    </style>
+
+    <style name="SemiBold.10ssp">
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="SemiBold.10ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SemiBold.10ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SemiBold.10ssp.C_FD3100">
+        <item name="android:textColor">@color/C_FD3100</item>
+    </style>
+
+    <style name="SemiBold.10ssp.C_ED1D26">
+        <item name="android:textColor">@color/C_ED1D26</item>
+    </style>
+
+    <style name="SemiBold.10ssp.C_808080">
+        <item name="android:textColor">@color/C_808080</item>
+    </style>
+
+    <style name="SemiBold.10ssp.C_9D9D9D">
+        <item name="android:textColor">@color/C_9D9D9D</item>
+    </style>
+
+    <style name="SemiBold.11ssp">
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="SemiBold.11ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SemiBold.12ssp">
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="SemiBold.12ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SemiBold.12ssp.C_ED1D26">
+        <item name="android:textColor">@color/C_ED1D26</item>
+    </style>
+
+    <style name="SemiBold.14ssp">
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="SemiBold.14ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SemiBold.14ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SemiBold.15ssp">
+        <item name="android:textSize">@dimen/_15ssp</item>
+    </style>
+
+    <style name="SemiBold.15ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <!-- Fonts Cerebri Bold-->
+    <style name="Bold">
+        <item name="fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+    </style>
+
+    <style name="Bold.8ssp">
+        <item name="android:textSize">@dimen/_8ssp</item>
+    </style>
+
+    <style name="Bold.8ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Bold.8ssp.C_ED1D26">
+        <item name="android:textColor">@color/C_ED1D26</item>
+    </style>
+
+    <style name="Bold.9ssp">
+        <item name="android:textSize">@dimen/_8ssp</item>
+    </style>
+
+    <style name="Bold.9ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Bold.10ssp">
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="Bold.10ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Bold.10ssp.C_ED1D26">
+        <item name="android:textColor">@color/C_ED1D26</item>
+    </style>
+
+    <style name="Bold.10ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Bold.11ssp">
+        <item name="android:textSize">@dimen/_11ssp</item>
+    </style>
+
+    <style name="Bold.11ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Bold.12ssp">
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="Bold.12ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Bold.12ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Bold.14ssp">
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="Bold.14ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Bold.14ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Bold.15ssp">
+        <item name="android:textSize">@dimen/_15ssp</item>
+    </style>
+
+    <style name="Bold.15ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Bold.15ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Bold.16ssp">
+        <item name="android:textSize">@dimen/_16ssp</item>
+    </style>
+
+    <style name="Bold.16ssp.C_FFFFFF">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Bold.17ssp">
+        <item name="android:textSize">@dimen/_17ssp</item>
+    </style>
+
+    <style name="Bold.17ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Bold.20ssp">
+        <item name="android:textSize">@dimen/_20ssp</item>
+    </style>
+
+    <style name="Bold.20ssp.C_000000">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!-- Tutorial Activity Flow Button Style-->
+    <style name="TutorialButtonCustomStyle">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="background">@drawable/bg_auth_button</item>
+        <item name="android:background">@drawable/bg_auth_button</item>
+        <item name="android:textColor">@color/C_FD3100</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+    </style>
+
+    <!-- App Flow Button Style-->
+    <style name="AppButtonCustomStyle">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="background">@drawable/bg_app_button</item>
+        <item name="android:background">@drawable/bg_app_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+    </style>
+
+    <style name="AppButtonCustomStyleLowerCase" parent="AppButtonCustomStyle">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="AppMaterialButtonCustomStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">@color/C_ED1D26</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:letterSpacing">@integer/int_0</item>
+        <item name="fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+    </style>
+
+    <style name="AppOutlinedButtonCustomStyle" parent="AppButtonCustomStyle">
+        <item name="background">@drawable/bg_btn_outlined</item>
+        <item name="android:background">@drawable/bg_btn_outlined</item>
+        <item name="android:textColor">@color/C_ED1D26</item>
+    </style>
+
+    <style name="AppOutlinedButtonCustomStyleCaps" parent="AppOutlinedButtonCustomStyle">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="AppGreyBgWithOpacityButtonCustomStyle" parent="AppButtonCustomStyle">
+        <item name="background">@drawable/bg_grey_app_button_with_opacity</item>
+        <item name="android:background">@drawable/bg_grey_app_button_with_opacity</item>
+        <item name="android:textColor">@color/C_808080</item>
+    </style>
+
+    <style name="AppButtonWithOpacityCustomStyle" parent="AppButtonCustomStyle">
+        <item name="background">@drawable/bg_app_button_with_opacity</item>
+        <item name="android:background">@drawable/bg_app_button_with_opacity</item>
+        <item name="android:textColor">@color/C_ED1D26</item>
+    </style>
+
+    <style name="AppGreyOutlinedButtonCustomStyle" parent="AppButtonCustomStyle">
+        <item name="background">@drawable/bg_white_btn_grey_outlined</item>
+        <item name="android:background">@drawable/bg_white_btn_grey_outlined</item>
+        <item name="android:textColor">@color/C_808080</item>
+    </style>
+
+    <style name="AppGreyOutlinedGreyBgButtonCustomStyle" parent="AppButtonCustomStyle">
+        <item name="background">@drawable/bg_grey_btn_grey_outlined</item>
+        <item name="android:background">@drawable/bg_grey_btn_grey_outlined</item>
+        <item name="android:textColor">@color/C_808080</item>
+    </style>
+
+    <style name="AppMaterialOutlinedButtonCustomStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="textAppearanceBody1">@dimen/dp_0</item>
+        <item name="android:textColor">@color/C_ED1D26</item>
+        <item name="android:textAppearance">@style/AppMaterialButton.TextAppearance</item>
+        <item name="iconTint">@color/C_ED1D26</item>
+        <item name="fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+        <item name="textAllCaps">true</item>
+        <item name="iconPadding">@dimen/_7sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="iconGravity">textStart</item>
+        <item name="cornerRadius">@dimen/_2sdp</item>
+        <item name="strokeColor">@color/C_ED1D26</item>
+        <item name="strokeWidth">@dimen/_2sdp</item>
+        <item name="android:paddingTop">@dimen/_11sdp</item>
+        <item name="android:paddingBottom">@dimen/_11sdp</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="AppMaterialButton.TextAppearance" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+
+    <style name="AppMaterialFilledButtonCustomStyle" parent="AppMaterialOutlinedButtonCustomStyle">
+        <item name="backgroundTint">@color/C_ED1D26</item>
+        <item name="textAppearanceBody1">@dimen/dp_0</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">@style/AppMaterialButton.TextAppearance</item>
+        <item name="iconTint">@color/white</item>
+        <item name="textAllCaps">true</item>
+        <item name="iconPadding">@dimen/_7sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="cornerRadius">@dimen/_2sdp</item>
+        <item name="strokeColor">@color/C_ED1D26</item>
+        <item name="strokeWidth">@dimen/_2sdp</item>
+        <item name="android:paddingTop">@dimen/_11sdp</item>
+        <item name="android:paddingBottom">@dimen/_11sdp</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <!-- Customer Home Toggle Button Style -->
+    <style name="HomeToggleButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/home_button_bg_color_selector</item>
+        <item name="android:textColor">@color/home_button_text_color_selector</item>
+        <item name="iconTint">@color/home_button_text_color_selector</item>
+        <item name="fontFamily">@font/cerebri_sans_regular</item>
+        <item name="android:fontFamily">@font/cerebri_sans_regular</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="iconGravity">textStart</item>
+        <item name="cornerRadius">@dimen/_4sdp</item>
+        <item name="strokeColor">@color/home_button_stroke_color_selector</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:paddingTop">@dimen/_12sdp</item>
+        <item name="android:paddingBottom">@dimen/_12sdp</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
+
+    <style name="HomeSubCategoryToggleButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/home_both_linked_chip_text_color</item>
+        <item name="fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">@dimen/_2sdp</item>
+        <item name="cornerRadius">@dimen/_4sdp</item>
+        <item name="strokeColor">@color/redeem_button_stroke_color</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:paddingTop">@dimen/_7sdp</item>
+        <item name="android:paddingBottom">@dimen/_7sdp</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
+
+    <style name="RequestToggleButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/home_button_bg_color_selector</item>
+        <item name="android:textColor">@color/request_button_text_color_selector</item>
+        <item name="fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">@dimen/_2sdp</item>
+        <item name="strokeColor">@color/property_type_chip_stroke_color_selector</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:paddingTop">@dimen/_12sdp</item>
+        <item name="android:paddingBottom">@dimen/_12sdp</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
+
+    <style name="PropertyListToggleButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/property_list_button_bg_color_selector</item>
+        <item name="android:textColor">@color/request_button_text_color_selector</item>
+        <item name="fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/_3sdp</item>
+        <item name="strokeColor">@color/C_ED1D26</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:letterSpacing">@integer/int_0</item>
+        <item name="android:paddingTop">@dimen/_12sdp</item>
+        <item name="android:paddingBottom">@dimen/_12sdp</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
+
+    <!-- Local Deals Detail Material Button Style-->
+    <style name="DealMaterialButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:letterSpacing">@integer/int_0</item>
+        <item name="iconTint">@color/C_5C5C5C</item>
+        <item name="fontFamily">@font/cerebri_sans_regular</item>
+        <item name="android:fontFamily">@font/cerebri_sans_regular</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="iconPadding">@dimen/_12sdp</item>
+        <item name="android:elevation">@dimen/dp_1</item>
+        <item name="iconGravity">textStart</item>
+        <item name="cornerRadius">@dimen/_4sdp</item>
+        <item name="strokeColor">@color/C_DFDFDF</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:paddingTop">@dimen/_12sdp</item>
+        <item name="android:paddingBottom">@dimen/_12sdp</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
+
+    <style name="SaleDealMaterialButtonStyle" parent="DealMaterialButtonStyle">
+        <item name="iconPadding">@dimen/_9sdp</item>
+        <item name="iconGravity">textTop</item>
+        <item name="android:letterSpacing">@integer/int_0</item>
+        <item name="android:clickable">false</item>
+        <item name="cornerRadius">@dimen/_4sdp</item>
+        <item name="android:paddingTop">@dimen/_14sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_13sdp</item>
+        <item name="android:paddingEnd">@dimen/_13sdp</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
+
+    <style name="AddPropertyDetailsButtonStyle" parent="DealMaterialButtonStyle">
+        <item name="backgroundTint">@color/C_ED1D26</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+        <item name="fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="strokeWidth">@dimen/dp_0</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+
+    <style name="AppMaterialButtonWithOpacityCustomStyle" parent="DealMaterialButtonStyle">
+        <item name="backgroundTint">@color/C_FFF3F0</item>
+        <item name="android:textColor">@color/C_ED1D26</item>
+        <item name="iconTint">@color/C_ED1D26</item>
+        <item name="fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="strokeColor">@color/C_ED1D26</item>
+    </style>
+
+    <!-- Material Card View Style-->
+    <style name="MaterialCardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">@dimen/_10sdp</item>
+        <item name="cardBackgroundColor">@color/C_F9F9F9</item>
+        <item name="android:strokeWidth">@dimen/_1sdp</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:strokeColor">@color/C_C6C6C6</item>
+        <item name="strokeColor">@color/C_C6C6C6</item>
+    </style>
+
+    <!-- Auth Edit Text Style-->
+    <style name="AuthEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingTop">@dimen/dp_0</item>
+        <item name="android:paddingBottom">@dimen/_15sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="hintTextAppearance">@style/Regular</item>
+        <item name="android:inputType">textAutoCorrect</item>
+        <item name="android:drawablePadding">@dimen/_9sdp</item>
+        <item name="background">@drawable/selector_edittext</item>
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/C_A0A7AB</item>
+        <item name="hintTextColor">@color/C_A0A7AB</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
+
+    <style name="EditTextTheme" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
+    <!-- Outlined Box Edit Text Style-->
+    <style name="OutlinedBoxEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="hintTextAppearance">@style/Regular</item>
+        <item name="hintTextColor">@color/C_999999</item>
+        <item name="android:textColorHint">@color/C_999999</item>
+        <item name="android:background">@drawable/bg_edittext_outlined</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:inputType">textAutoCorrect</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_15sdp</item>
+        <item name="fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:drawablePadding">@dimen/_7sdp</item>
+    </style>
+
+    <style name="DarkOutlinedBoxEditTextStyle" parent="OutlinedBoxEditTextStyle">
+        <item name="android:background">@drawable/bg_edittext_with_dark_outline</item>
+        <item name="android:textSize">@dimen/_8sdp</item>
+        <item name="android:textColor">@color/C_808080</item>
+    </style>
+
+    <!-- TextInputLayout OTP Style-->
+    <style name="Widgets.TextInputLayout.OTP" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="boxCornerRadiusBottomEnd">5dp</item>
+        <item name="boxCornerRadiusBottomStart">5dp</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="boxCornerRadiusTopStart">5dp</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeColor">@color/C_E9E9E9</item>
+        <item name="hintTextColor">@color/C_A0A7AB</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <!-- TextInputEditText OTP Style-->
+    <style name="Widgets.TextInputEditText.OTP" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:digits">0123456789</item>
+        <item name="fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:textCursorDrawable">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColorHint">@color/C_A0A7AB</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--Search Edit Text Style-->
+    <style name="SearchInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="colorControlActivated">@color/C_DEDEDE</item>
+        <item name="colorControlNormal">@color/C_DEDEDE</item>
+        <item name="boxStrokeColor">@color/C_DEDEDE</item>
+        <item name="strokeWidth">@dimen/dp_1</item>
+        <item name="endIconTint">@color/C_9D9D9D</item>
+        <item name="endIconMode">custom</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:textAppearance">@style/SearchInputEditTextStyle</item>
+        <item name="colorControlHighlight">@color/C_DEDEDE</item>
+        <item name="android:imeOptions">actionSearch</item>
+    </style>
+
+    <style name="SearchInputEditTextStyle" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/cerebri_sans_regular</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="hintTextColor">@color/C_8D8D8D</item>
+        <item name="android:fontFamily">@font/cerebri_sans_semi_bold</item>
+        <item name="android:drawableStart">@drawable/ic_search</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:hint">@string/hint_search_by_keywords</item>
+        <item name="android:drawablePadding">@dimen/_7sdp</item>
+        <item name="android:paddingTop">@dimen/_7sdp</item>
+        <item name="android:paddingBottom">@dimen/_7sdp</item>
+        <item name="android:inputType">textAutoCorrect</item>
+    </style>
+
+    <style name="FocusedBorderEditTextStyle" parent="OutlinedBoxEditTextStyle">
+        <item name="hintTextColor">@color/C_A7A7A7</item>
+        <item name="android:textColorHint">@color/C_A7A7A7</item>
+        <item name="android:background">@drawable/bg_edittext_outlined_selector</item>
+        <item name="elevation">@dimen/_2sdp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:inputType">textAutoCorrect</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="android:elevation">@dimen/dp_2</item>
+    </style>
+
+    <!-- User selection style -->
+    <style name="UserSelectionTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/redeem_button_text_color</item>
+        <item name="fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:drawableEnd">@drawable/ic_continue</item>
+    </style>
+
+
+    <!-- Tab style -->
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+        <item name="tabTextColor">@color/tab_text_color_selector</item>
+        <item name="tabIndicator">@drawable/indicator_for_tablayout</item>
+        <item name="android:background">@color/white</item>
+        <item name="tabMode">fixed</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="tabIndicatorColor">@color/C_ED1D26</item>
+    </style>
+
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+        <item name="fontFamily">@font/cerebri_sans_regular</item>
+        <item name="android:fontFamily">@font/cerebri_sans_regular</item>
+    </style>
+
+
+    <!-- shapeable imageview-->
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize2" parent="">
+        <item name="cornerSize">2%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize3" parent="">
+        <item name="cornerSize">3%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize4" parent="">
+        <item name="cornerSize">4%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize5" parent="">
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize6" parent="">
+        <item name="cornerSize">6%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize7" parent="">
+        <item name="cornerSize">7%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize10" parent="">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize12" parent="">
+        <item name="cornerSize">12%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize15" parent="">
+        <item name="cornerSize">15%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize20" parent="">
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="Widget.AppCompat.ShapeableImageView.CornerSize50" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_loading_indicator_splash_screen
+        </item>
+        <item name="postSplashScreenTheme">@style/SplashTheme</item>
+    </style>
+
+    <style name="TransparentDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

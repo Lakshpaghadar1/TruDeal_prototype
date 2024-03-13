@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewBg"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bg_image_splash_screen" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewLoading"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewBg"
+        app:layout_constraintEnd_toEndOf="@id/imageViewBg"
+        app:layout_constraintStart_toStartOf="@id/imageViewBg"
+        app:layout_constraintTop_toTopOf="@id/imageViewBg"
+        app:srcCompat="@drawable/ic_loading_splash_screen" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewAppLogo"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@id/imageViewLoading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_slogan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUploadBusinessLogo"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/label_business_logo_jpg_png_only"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutUploadLogo"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/bg_upload_media_opacity"
+            android:padding="@dimen/_1sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintTop_toBottomOf="@id/textViewUploadBusinessLogo">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/Widget.AppCompat.ShapeableImageView.CornerSize5"
+                tools:srcCompat="@drawable/dummy_image_media" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewDeleteLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_7sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_delete_media" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewReUploadLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_7sdp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewDeleteLogo"
+                app:layout_constraintEnd_toStartOf="@id/imageViewDeleteLogo"
+                app:layout_constraintHorizontal_bias="@integer/int_1"
+                app:layout_constraintStart_toEndOf="@id/imageViewLogo"
+                app:layout_constraintTop_toTopOf="@id/imageViewDeleteLogo"
+                app:srcCompat="@drawable/ic_reupload" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonUploadBusinessLogo"
+            style="@style/AppMaterialButtonWithOpacityCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/btn_upload"
+            app:icon="@drawable/ic_add_or_upload_media"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutUploadLogo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUploadBrochure"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_brochure_pdf_only"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintTop_toBottomOf="@id/buttonUploadBusinessLogo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDocuments"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUploadBrochure"
+            tools:itemCount="@integer/int_3"
+            tools:listitem="@layout/item_add_property_images" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonUploadBrochure"
+            style="@style/AppMaterialButtonWithOpacityCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/btn_upload"
+            app:icon="@drawable/ic_add_or_upload_media"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewDocuments" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUploadMenu"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_menu_jpg_png_only"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintTop_toBottomOf="@id/buttonUploadBrochure" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMenu"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUploadMenu"
+            tools:itemCount="@integer/int_3"
+            tools:listitem="@layout/item_add_property_images" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonUploadMenu"
+            style="@style/AppMaterialButtonWithOpacityCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/btn_upload"
+            app:icon="@drawable/ic_add_or_upload_media"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewMenu" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUploadBusinessSlider"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/label_business_slider_jpg_png_only"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintTop_toBottomOf="@id/buttonUploadMenu" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewBusinessSlider"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUploadBusinessSlider"
+            tools:itemCount="@integer/int_3"
+            tools:listitem="@layout/item_add_property_images" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonUploadBusinessSlider"
+            style="@style/AppMaterialButtonWithOpacityCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/btn_upload"
+            app:icon="@drawable/ic_add_or_upload_media"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewBusinessSlider" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonNext"
+            style="@style/AppButtonCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/btn_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintStart_toStartOf="@id/textViewUploadBusinessLogo"
+            app:layout_constraintTop_toBottomOf="@id/buttonUploadBusinessSlider"
+            app:layout_constraintVertical_bias="@integer/int_1"
+            app:textAllCaps="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

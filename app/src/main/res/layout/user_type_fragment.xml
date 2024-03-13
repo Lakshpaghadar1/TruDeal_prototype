@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewAppLogo"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/app_slogan" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewCustomerLogin"
+            style="@style/Bold.11ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/label_consumer_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewAppLogo" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewCustomerLogin"
+            style="@style/MaterialCardViewStyle"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:elevation="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            app:layout_constraintBottom_toTopOf="@id/linearLayout"
+            app:layout_constraintEnd_toEndOf="@id/textViewCustomerLogin"
+            app:layout_constraintStart_toStartOf="@id/textViewCustomerLogin"
+            app:layout_constraintTop_toBottomOf="@id/textViewCustomerLogin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewCustomerLogin"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/image_customer_login" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewDescCustomerUser"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@id/buttonCustomerContinue"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewCustomerLogin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:itemCount="@integer/int_3"
+                    tools:listitem="@layout/select_user_description_row" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonCustomerContinue"
+                    style="@style/AppMaterialButtonCustomStyle"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:text="@string/btn_continue"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewCustomerLogin"
+                    app:layout_constraintStart_toStartOf="@id/recyclerViewDescCustomerUser"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerViewDescCustomerUser" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayout"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:weightSum="@integer/int_2"
+            android:layout_marginBottom="@dimen/_2sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/cardViewCustomerLogin"
+            app:layout_constraintStart_toStartOf="@id/cardViewCustomerLogin"
+            app:layout_constraintTop_toBottomOf="@id/cardViewCustomerLogin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutRealEstate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="@integer/int_1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewRealEstateLogin"
+                    style="@style/Bold.11ssp.C_000000"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_real_estate_ad_login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardViewRealEstateLogin"
+                    style="@style/MaterialCardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:elevation="@dimen/_2sdp"
+                    app:layout_constraintStart_toStartOf="@id/textViewRealEstateLogin"
+                    app:layout_constraintTop_toBottomOf="@id/textViewRealEstateLogin">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewDescRealEstateUser"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:itemCount="@integer/int_3"
+                            tools:listitem="@layout/select_user_description_row" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewRealEstateLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_95sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            app:layout_constraintEnd_toEndOf="@id/recyclerViewDescRealEstateUser"
+                            app:layout_constraintStart_toStartOf="@id/recyclerViewDescRealEstateUser"
+                            app:layout_constraintTop_toBottomOf="@id/recyclerViewDescRealEstateUser"
+                            app:srcCompat="@drawable/image_real_estate_login" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonRealEstateContinue"
+                            style="@style/AppMaterialButtonCustomStyle"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_7sdp"
+                            android:text="@string/btn_continue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/recyclerViewDescRealEstateUser"
+                            app:layout_constraintStart_toStartOf="@id/recyclerViewDescRealEstateUser"
+                            app:layout_constraintTop_toBottomOf="@id/imageViewRealEstateLogin" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutBusinessOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="@integer/int_1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewBusinessOwnerLogin"
+                    style="@style/Bold.11ssp.C_000000"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_business_owner_login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardViewBusinessOwnerLogin"
+                    style="@style/MaterialCardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:elevation="@dimen/_2sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/textViewBusinessOwnerLogin"
+                    app:layout_constraintTop_toBottomOf="@id/textViewBusinessOwnerLogin">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewDescBusinessOwnerUser"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:itemCount="@integer/int_3"
+                            tools:listitem="@layout/select_user_description_row" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewBusinessOwnerLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_95sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            app:layout_constraintEnd_toEndOf="@id/recyclerViewDescBusinessOwnerUser"
+                            app:layout_constraintStart_toStartOf="@id/recyclerViewDescBusinessOwnerUser"
+                            app:layout_constraintTop_toBottomOf="@id/recyclerViewDescBusinessOwnerUser"
+                            app:srcCompat="@drawable/image_business_owner_login" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonBusinessOwnerContinue"
+                            style="@style/AppMaterialButtonCustomStyle"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_7sdp"
+                            android:text="@string/btn_continue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/recyclerViewDescBusinessOwnerUser"
+                            app:layout_constraintStart_toStartOf="@id/recyclerViewDescBusinessOwnerUser"
+                            app:layout_constraintTop_toBottomOf="@id/imageViewBusinessOwnerLogin" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

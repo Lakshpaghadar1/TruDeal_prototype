@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewEmailAddress"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/label_email_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextEmailAddress"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_email"
+            android:hint="@string/hint_email_address"
+            app:layout_constraintEnd_toEndOf="@id/textViewEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/textViewEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/textViewEmailAddress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPhoneNumber"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_phone_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextEmailAddress" />
+
+        <include
+            android:id="@+id/layoutPhoneNumber"
+            layout="@layout/layout_phone_number"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/textViewEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/textViewEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/textViewPhoneNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewFacebookLink"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_facebook_link"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutPhoneNumber" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextFacebookLink"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_link_orange"
+            android:hint="@string/hint_paste_here"
+            app:layout_constraintEnd_toEndOf="@id/textViewEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/textViewEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/textViewFacebookLink" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTwitterLink"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_twitter_link"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextFacebookLink" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextTwitterLink"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_link_orange"
+            android:hint="@string/hint_paste_here"
+            app:layout_constraintEnd_toEndOf="@id/textViewEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/textViewEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/textViewTwitterLink" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewGoogleProfile"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_google_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextTwitterLink" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextGoogleProfile"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_link_orange"
+            android:hint="@string/hint_paste_here"
+            app:layout_constraintEnd_toEndOf="@id/textViewEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/textViewEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/textViewGoogleProfile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewInstagramLink"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_instagram_link"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextGoogleProfile" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextInstagramLink"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_link_orange"
+            android:hint="@string/hint_paste_here"
+            app:layout_constraintEnd_toEndOf="@id/textViewEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/textViewEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/textViewInstagramLink" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewYelpLink"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_yelp_link"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextInstagramLink" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextYelpLink"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_link_orange"
+            android:hint="@string/hint_paste_here"
+            app:layout_constraintEnd_toEndOf="@id/textViewEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/textViewEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/textViewYelpLink" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewMetaKeyword"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_meta_keyword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextYelpLink" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextMetaKeyword"
+            style="@style/AuthEditTextStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:drawableStart="@drawable/ic_link_orange"
+            android:hint="@string/hint_paste_here"
+            android:imeOptions="actionDone"
+            app:layout_constraintEnd_toEndOf="@id/textViewEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/textViewEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/textViewMetaKeyword" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonNext"
+            style="@style/AppButtonCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/btn_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/editTextMetaKeyword"
+            app:layout_constraintStart_toStartOf="@id/editTextMetaKeyword"
+            app:layout_constraintTop_toBottomOf="@id/editTextMetaKeyword"
+            app:layout_constraintVertical_bias="@integer/int_1"
+            app:textAllCaps="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

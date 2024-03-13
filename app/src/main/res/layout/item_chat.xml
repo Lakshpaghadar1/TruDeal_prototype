@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:rightEdgeSwipeOffset="@dimen/dp_0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutCard"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:elevation="@dimen/_2sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewBlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingHorizontal="@dimen/_17sdp"
+                    android:paddingVertical="@dimen/_15sdp"
+                    android:text="@string/label_block"
+                    android:textColor="@color/C_ED1D26"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textViewDelete"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/C_ED1D26"
+                    android:paddingHorizontal="@dimen/_17sdp"
+                    android:paddingVertical="@dimen/_15sdp"
+                    android:text="@string/label_delete"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textViewBlock"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageViewProfile"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Widget.AppCompat.ShapeableImageView.CornerSize50"
+            app:srcCompat="@drawable/dummy_image_chat_profile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUserName"
+            style="@style/SemiBold.11ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:maxLines="@integer/int_1"
+            android:text="Arieta"
+            app:layout_constraintBottom_toTopOf="@id/textViewLastMsg"
+            app:layout_constraintEnd_toStartOf="@id/textViewTime"
+            app:layout_constraintStart_toEndOf="@id/shapeableImageViewProfile"
+            app:layout_constraintTop_toTopOf="@id/shapeableImageViewProfile"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTime"
+            style="@style/Regular.8ssp.C_9D9D9D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:ellipsize="end"
+            android:maxLines="@integer/int_1"
+            android:text="Yesterday 10:45 PM"
+            app:layout_constraintBottom_toBottomOf="@id/textViewUserName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textViewUserName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewLastMsg"
+            style="@style/Regular.10ssp.C_ED1D26"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:text="Same to you!"
+            app:layout_constraintBottom_toBottomOf="@id/shapeableImageViewProfile"
+            app:layout_constraintEnd_toStartOf="@id/textViewBadge"
+            app:layout_constraintStart_toStartOf="@id/textViewUserName"
+            app:layout_constraintTop_toBottomOf="@id/textViewUserName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewBadge"
+            style="@style/SemiBold.7ssp.C_FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/bg_green_badge"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintCircleAngle="40"
+            app:layout_constraintCircleRadius="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@id/textViewTime"
+            app:layout_constraintTop_toTopOf="@id/textViewLastMsg"
+            tools:ignore="MissingConstraints"
+            tools:text="99+" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.daimajia.swipe.SwipeLayout>

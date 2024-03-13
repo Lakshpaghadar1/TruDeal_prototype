@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewDay"
+        style="@style/Regular.10ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:gravity="start"
+        app:layout_constraintEnd_toStartOf="@id/constraintLayoutTimeSlots"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Friday:" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutTimeSlots"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewDay"
+        app:layout_constraintTop_toTopOf="@id/textViewDay">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewIsClosed"
+            style="@style/Regular.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:gravity="end"
+            android:text="@string/label_closed"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTimeSlots"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_business_hours_time_slots" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewReasonForDifferHrs"
+        style="@style/Regular.10ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:gravity="start"
+        android:text="@string/dummy_good_friday"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/textViewHoursMightDiffer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDay" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewHoursMightDiffer"
+        style="@style/Regular.10ssp.C_ED1D26"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:gravity="end"
+        android:text="@string/dummy_hours_might_differ"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewReasonForDifferHrs"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutTimeSlots" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

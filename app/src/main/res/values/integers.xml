@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="int_0">0</integer>
+    <integer name="int_1">1</integer>
+    <integer name="int_2">2</integer>
+    <integer name="int_3">3</integer>
+    <integer name="int_4">4</integer>
+    <integer name="int_5">5</integer>
+    <integer name="int_6">6</integer>
+    <integer name="int_7">7</integer>
+    <integer name="int_8">8</integer>
+    <integer name="int_10">10</integer>
+    <integer name="int_11">11</integer>
+    <integer name="int_12">12</integer>
+    <integer name="int_13">13</integer>
+    <integer name="int_15">15</integer>
+    <integer name="int_16">16</integer>
+    <integer name="int_19">19</integer>
+    <integer name="int_200">200</integer>
+
+    <integer name="int_card_min_length">15</integer>
+    <integer name="int_card_max_length">16</integer>
+
+    <integer name="int_cvv_min_length">3</integer>
+    <integer name="int_cvv_max_length">4</integer>
+
+    <integer name="int_username_min_length">3</integer>
+    <integer name="int_username_max_length">30</integer>
+
+    <integer name="int_phone_number_min_length">8</integer>
+    <integer name="int_phone_number_max_length">11</integer>
+
+    <integer name="int_name_max_length">32</integer>
+    <integer name="int_title_max_length">32</integer>
+    <integer name="int_built_in_year_min_max_length">4</integer>
+    <integer name="int_area_max_length">10</integer>
+    <integer name="int_description_max_length">8000</integer>
+
+    <integer name="int_password_min_length">8</integer>
+    <integer name="int_zip_code_max_length">9</integer>
+    <integer name="int_promo_code_max_length">6</integer>
+</resources>

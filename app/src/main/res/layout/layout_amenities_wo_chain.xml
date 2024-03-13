@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayoutAmenities"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewNoOfBeds"
+        style="@style/Regular.9ssp.C_808080"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_bed"
+        android:gravity="center"
+        android:text="0 Beds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewNoOfBath"
+        style="@style/Regular.9ssp.C_808080"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:drawableTop="@drawable/ic_bathtub"
+        app:layout_constraintEnd_toStartOf="@id/textViewNoOfGarage"
+        android:gravity="center"
+        android:text="0 Bath"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewNoOfBeds"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewNoOfGarage"
+        style="@style/Regular.9ssp.C_808080"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:drawableTop="@drawable/ic_garage"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/textViewNoOfSqFt"
+        android:text="0 Garage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewNoOfBath"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewNoOfSqFt"
+        style="@style/Regular.9ssp.C_808080"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:drawableTop="@drawable/ic_measurement_tools"
+        android:gravity="center"
+        android:text="0 Sq Ft"
+        app:layout_constraintEnd_toStartOf="@id/textViewBuiltYear"
+        app:layout_constraintStart_toEndOf="@id/textViewNoOfGarage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewBuiltYear"
+        style="@style/Regular.9ssp.C_808080"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:drawableTop="@drawable/ic_built_year"
+        android:gravity="center"
+        android:text="Built Year - 2015"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- <androidx.appcompat.widget.AppCompatTextView
+         android:id="@+id/textViewNoOfBeds"
+         style="@style/Regular.9ssp.C_808080"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:drawableTop="@drawable/ic_bed"
+         android:gravity="center"
+         android:text="0 Beds"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <androidx.appcompat.widget.AppCompatTextView
+         android:id="@+id/textViewNoOfBath"
+         style="@style/Regular.9ssp.C_808080"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/_3sdp"
+         android:drawableTop="@drawable/ic_bathtub"
+         android:gravity="center"
+         android:text="0 Bath"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toStartOf="@id/textViewNoOfGarage"
+         app:layout_constraintStart_toEndOf="@id/textViewNoOfBeds"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <androidx.appcompat.widget.AppCompatTextView
+         android:id="@+id/textViewNoOfGarage"
+         style="@style/Regular.9ssp.C_808080"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/_3sdp"
+         android:drawableTop="@drawable/ic_garage"
+         android:gravity="center"
+         android:text="0 Garage"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toStartOf="@id/textViewNoOfSqFt"
+         app:layout_constraintStart_toEndOf="@id/textViewNoOfBath"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <androidx.appcompat.widget.AppCompatTextView
+         android:id="@+id/textViewNoOfSqFt"
+         style="@style/Regular.9ssp.C_808080"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/_3sdp"
+         android:drawableTop="@drawable/ic_measurement_tools"
+         android:gravity="center"
+         android:text="0 Sq Ft"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toStartOf="@id/textViewBuiltYear"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <androidx.appcompat.widget.AppCompatTextView
+         android:id="@+id/textViewBuiltYear"
+         style="@style/Regular.9ssp.C_808080"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/_3sdp"
+         android:drawableTop="@drawable/ic_built_year"
+         android:gravity="center"
+         android:text="Built Year - 2015"
+         android:visibility="visible"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@id/textViewNoOfSqFt"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ -->
+</androidx.constraintlayout.widget.ConstraintLayout>

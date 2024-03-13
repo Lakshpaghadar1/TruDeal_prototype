@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewName"
+                style="@style/Regular.10ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="@integer/int_1"
+                android:text="@string/dummy_user_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewEmail"
+                style="@style/Regular.10ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="@integer/int_1"
+                android:text="@string/dummy_email"
+                app:layout_constraintEnd_toEndOf="@id/textViewName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPhoneNumber"
+                style="@style/Regular.10ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="@integer/int_1"
+                android:text="+9 4584521611"
+                app:layout_constraintEnd_toEndOf="@id/textViewName"
+                app:layout_constraintStart_toStartOf="@id/textViewName"
+                app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewDateAndTime"
+                style="@style/Regular.10ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawableStart="@drawable/ic_clock_orange"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="@integer/int_1"
+                android:text="23-Aug-2022, 10:30 AM"
+                app:layout_constraintEnd_toEndOf="@id/textViewName"
+                app:layout_constraintStart_toStartOf="@id/textViewName"
+                app:layout_constraintTop_toBottomOf="@id/textViewPhoneNumber" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:paddingTop="@dimen/_3sdp"
+                app:layout_constraintStart_toStartOf="@id/textViewPhoneNumber"
+                app:layout_constraintTop_toBottomOf="@id/textViewDateAndTime"
+                app:srcCompat="@drawable/ic_notes" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewNotes"
+                style="@style/Regular.10ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="@integer/int_3"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet dapibus massa. Proin sem sapien, blandit sit amet varius sed, facilisis ut tellus."
+                app:layout_constraintEnd_toEndOf="@id/textViewName"
+                app:layout_constraintStart_toEndOf="@id/imageViewNotes"
+                app:layout_constraintTop_toTopOf="@id/imageViewNotes" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewPropertyImage"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="@id/textViewName"
+                app:layout_constraintTop_toBottomOf="@id/textViewNotes"
+                app:shapeAppearanceOverlay="@style/Widget.AppCompat.ShapeableImageView.CornerSize10"
+                app:srcCompat="@drawable/dummy_image_listing" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPropertyType"
+                style="@style/SemiBold.11ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:ellipsize="end"
+                android:maxLines="@integer/int_1"
+                android:text="@string/dummy_user_name"
+                app:layout_constraintBottom_toTopOf="@id/textViewPropertyLocation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewPropertyImage"
+                app:layout_constraintTop_toTopOf="@id/imageViewPropertyImage"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPropertyLocation"
+                style="@style/Regular.10ssp.C_9D9D9D"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="@integer/int_1"
+                android:text="@string/dummy_address"
+                app:layout_constraintBottom_toTopOf="@id/layoutStatus"
+                app:layout_constraintEnd_toEndOf="@id/textViewPropertyType"
+                app:layout_constraintStart_toStartOf="@id/textViewPropertyType"
+                app:layout_constraintTop_toBottomOf="@id/textViewPropertyType" />
+
+            <include
+                android:id="@+id/layoutStatus"
+                layout="@layout/layout_request_property_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewPropertyImage"
+                app:layout_constraintStart_toStartOf="@id/textViewPropertyType"
+                app:layout_constraintTop_toBottomOf="@id/textViewPropertyLocation" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutNavButtons"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/textViewName"
+                app:layout_constraintStart_toStartOf="@id/textViewName"
+                app:layout_constraintTop_toBottomOf="@id/imageViewPropertyImage">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonNegative"
+                    style="@style/AppGreyOutlinedGreyBgButtonCustomStyle"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:text="@string/btn_reject"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/buttonPositive"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonPositive"
+                    style="@style/AppButtonCustomStyle"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="@string/btn_accept"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/buttonNegative"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonChat"
+                    style="@style/AppButtonCustomStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_45sdp"
+                    android:text="@string/label_chat"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

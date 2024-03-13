@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Widget.AppCompat.ShapeableImageView.CornerSize10"
+        app:srcCompat="@drawable/dummy_image_listing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewUserName"
+        style="@style/Bold.12ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_7sdp"
+        android:ellipsize="end"
+        android:maxLines="@integer/int_1"
+        android:text="@string/dummy_user_name"
+        app:layout_constraintBottom_toTopOf="@id/textViewProfileEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewProfile"
+        app:layout_constraintTop_toTopOf="@id/imageViewProfile"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewProfileEmail"
+        style="@style/Regular.10ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:ellipsize="end"
+        android:maxLines="@integer/int_1"
+        android:text="@string/dummy_email"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewProfile"
+        app:layout_constraintEnd_toEndOf="@id/textViewUserName"
+        app:layout_constraintStart_toStartOf="@id/textViewUserName"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewFirstName"
+        style="@style/SemiBold.10ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="@dimen/_11sdp"
+        android:text="Viol41"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewProfile" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewLastName"
+        style="@style/SemiBold.10ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="@dimen/_11sdp"
+        android:text="Violet Norman"
+        app:layout_constraintEnd_toEndOf="@id/textViewFirstName"
+        app:layout_constraintStart_toStartOf="@id/textViewFirstName"
+        app:layout_constraintTop_toBottomOf="@id/textViewFirstName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewEmail"
+        style="@style/SemiBold.10ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="@string/dummy_email"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="@id/textViewFirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLastName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewPhoneNumber"
+        style="@style/SemiBold.10ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="@dimen/_11sdp"
+        android:text="+9 1415245121"
+        app:layout_constraintEnd_toEndOf="@id/textViewFirstName"
+        app:layout_constraintStart_toStartOf="@id/textViewFirstName"
+        app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAddress"
+        style="@style/SemiBold.10ssp.C_000000"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        android:drawableStart="@drawable/ic_address"
+        android:drawablePadding="@dimen/_11sdp"
+        android:text="B103/4, Abc com, AA Road, BB area, CA"
+        app:layout_constraintEnd_toEndOf="@id/textViewFirstName"
+        app:layout_constraintStart_toStartOf="@id/textViewFirstName"
+        app:layout_constraintTop_toBottomOf="@id/textViewPhoneNumber" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonEdit"
+        style="@style/AppButtonCustomStyle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:text="@string/label_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

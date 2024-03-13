@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutProfileContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewClose">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Widget.AppCompat.ShapeableImageView.CornerSize10"
+            app:srcCompat="@drawable/dummy_image_listing" />
+
+        <View
+            android:id="@+id/editBg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:background="@drawable/bg_edit"
+            app:layout_constraintBottom_toBottomOf="@id/textViewEdit"
+            app:layout_constraintEnd_toEndOf="@id/imageViewProfile"
+            app:layout_constraintStart_toStartOf="@id/imageViewProfile"
+            app:layout_constraintTop_toTopOf="@id/textViewEdit" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewEdit"
+            style="@style/Regular.10ssp.C_FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_edit"
+            android:drawablePadding="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_3sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:text="@string/label_edit"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewProfile"
+            app:layout_constraintEnd_toEndOf="@id/imageViewProfile"
+            app:layout_constraintStart_toStartOf="@id/imageViewProfile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUserName"
+            style="@style/Bold.12ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:ellipsize="end"
+            android:maxLines="@integer/int_1"
+            android:text="@string/dummy_user_name"
+            app:layout_constraintBottom_toTopOf="@id/textViewEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageViewProfile"
+            app:layout_constraintTop_toTopOf="@id/imageViewProfile"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewEmail"
+            style="@style/Regular.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:ellipsize="end"
+            android:maxLines="@integer/int_1"
+            android:text="@string/dummy_email"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewProfile"
+            app:layout_constraintEnd_toEndOf="@id/textViewUserName"
+            app:layout_constraintStart_toStartOf="@id/textViewUserName"
+            app:layout_constraintTop_toBottomOf="@id/textViewUserName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

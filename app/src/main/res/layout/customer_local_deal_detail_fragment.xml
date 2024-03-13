@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@id/viewPager"
+            app:layout_constraintEnd_toEndOf="@id/viewPager"
+            app:layout_constraintTop_toTopOf="@id/viewPager"
+            app:srcCompat="@drawable/ic_next" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@id/viewPager"
+            app:layout_constraintStart_toStartOf="@id/viewPager"
+            app:layout_constraintTop_toTopOf="@id/viewPager"
+            app:srcCompat="@drawable/ic_previous" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDealName"
+            style="@style/SemiBold.12ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:ellipsize="end"
+            android:maxLines="@integer/int_2"
+            android:text="Adventure High Ropes"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewHeart"
+            app:layout_constraintEnd_toStartOf="@id/imageViewHeart"
+            app:layout_constraintStart_toStartOf="@id/viewPager"
+            app:layout_constraintTop_toTopOf="@id/imageViewHeart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewHeart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_7sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewPager"
+            app:srcCompat="@drawable/selector_heart" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewServiceName"
+            style="@style/Regular.10ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:ellipsize="end"
+            android:maxLines="@integer/int_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewDealName"
+            app:layout_constraintTop_toBottomOf="@id/textViewDealName"
+            tools:text="Xanadu Med Spa" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewLocation"
+            style="@style/Regular.10ssp.C_9D9D9D"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:maxLines="@integer/int_2"
+            app:layout_constraintEnd_toEndOf="@id/textViewServiceName"
+            app:layout_constraintStart_toStartOf="@id/textViewDealName"
+            app:layout_constraintTop_toBottomOf="@id/textViewServiceName"
+            tools:text="805-807 N Avalon St, Memphis, TN 38107 Listed by Worth W Woodyard with Woodyard Realty Corp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDiscountedPrice"
+            style="@style/SemiBold.10ssp.C_000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:text="@string/label_price_dash"
+            app:layout_constraintEnd_toStartOf="@id/textViewOriginalPrice"
+            app:layout_constraintStart_toStartOf="@id/textViewLocation"
+            app:layout_constraintTop_toBottomOf="@id/textViewLocation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewOriginalPrice"
+            style="@style/SemiBold.10ssp.C_808080"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@id/textViewDiscountedPrice"
+            app:layout_constraintStart_toEndOf="@id/textViewDiscountedPrice"
+            app:layout_constraintTop_toTopOf="@id/textViewDiscountedPrice"
+            tools:text="$8,500" />
+
+        <View
+            android:id="@+id/viewOnOriginalPrice"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/C_808080"
+            app:layout_constraintBottom_toBottomOf="@id/textViewOriginalPrice"
+            app:layout_constraintEnd_toEndOf="@id/textViewOriginalPrice"
+            app:layout_constraintStart_toStartOf="@id/textViewOriginalPrice"
+            app:layout_constraintTop_toTopOf="@id/textViewOriginalPrice" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSaleEnds"
+            style="@style/SaleDealMaterialButtonStyle"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_95sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:text="@string/label_sale_ends_next_line_date_x"
+            app:icon="@drawable/ic_clock"
+            app:layout_constraintEnd_toStartOf="@id/buttonItemsLeft"
+            app:layout_constraintStart_toStartOf="@id/buttonRedeem"
+            app:layout_constraintTop_toBottomOf="@id/textViewOriginalPrice" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonItemsLeft"
+            style="@style/SaleDealMaterialButtonStyle"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_95sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:text="@string/label_items_left_next_line_items_left_x"
+            app:icon="@drawable/ic_items_left"
+            app:layout_constraintBottom_toBottomOf="@id/buttonSaleEnds"
+            app:layout_constraintEnd_toStartOf="@id/buttonBought"
+            app:layout_constraintStart_toEndOf="@id/buttonSaleEnds"
+            app:layout_constraintTop_toTopOf="@id/buttonSaleEnds" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBought"
+            style="@style/SaleDealMaterialButtonStyle"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_95sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="@string/label_bought_next_line_count_x"
+            app:icon="@drawable/ic_cart"
+            app:layout_constraintBottom_toBottomOf="@id/buttonSaleEnds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonItemsLeft"
+            app:layout_constraintTop_toTopOf="@id/buttonSaleEnds" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonRedeem"
+            style="@style/DealMaterialButtonStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="@string/btn_redeem_now"
+            android:textColor="@color/redeem_button_text_color"
+            app:backgroundTint="@color/redeem_button_bg_color"
+            app:icon="@drawable/ic_redeem"
+            app:iconTint="@color/redeem_button_icon_color"
+            app:layout_constraintEnd_toStartOf="@id/buttonSave"
+            app:layout_constraintStart_toStartOf="@id/textViewServiceName"
+            app:layout_constraintTop_toBottomOf="@id/buttonSaleEnds"
+            app:strokeColor="@color/redeem_button_stroke_color" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSave"
+            style="@style/DealMaterialButtonStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/btn_save_for_later"
+            app:icon="@drawable/selector_save"
+            app:iconTint="@color/save_button_icon_tint_color_selector"
+            app:layout_constraintBottom_toBottomOf="@id/buttonRedeem"
+            app:layout_constraintEnd_toEndOf="@id/textViewServiceName"
+            app:layout_constraintStart_toEndOf="@id/buttonRedeem"
+            app:layout_constraintTop_toTopOf="@id/buttonRedeem" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewShareThisDeal"
+            style="@style/SemiBold.12ssp.C_ED1D26"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/label_save_this_deal_and_save_even_more"
+            app:layout_constraintEnd_toEndOf="@id/textViewServiceName"
+            app:layout_constraintStart_toStartOf="@id/textViewServiceName"
+            app:layout_constraintTop_toBottomOf="@id/buttonRedeem" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewShareThisDealDescription"
+            style="@style/Regular.9ssp.C_000000"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/dummy_share_this_deal_and_save_even_more_description"
+            app:layout_constraintEnd_toEndOf="@id/textViewShareThisDeal"
+            app:layout_constraintStart_toStartOf="@id/textViewShareThisDeal"
+            app:layout_constraintTop_toBottomOf="@id/textViewShareThisDeal" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonShare"
+            style="@style/AppOutlinedButtonCustomStyle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/btn_share"
+            app:layout_constraintEnd_toEndOf="@id/textViewShareThisDealDescription"
+            app:layout_constraintStart_toStartOf="@id/textViewShareThisDealDescription"
+            app:layout_constraintTop_toBottomOf="@id/textViewShareThisDealDescription" />
+
+        <include
+            android:id="@+id/layoutDealDescription"
+            layout="@layout/layout_show_more_show_less"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@id/textViewServiceName"
+            app:layout_constraintStart_toStartOf="@id/textViewServiceName"
+            app:layout_constraintTop_toBottomOf="@id/buttonShare" />
+
+        <include
+            android:id="@+id/layoutTermsAndConditions"
+            layout="@layout/layout_show_more_show_less"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@id/textViewServiceName"
+            app:layout_constraintStart_toStartOf="@id/textViewServiceName"
+            app:layout_constraintTop_toBottomOf="@id/layoutDealDescription" />
+
+        <include
+            android:id="@+id/layoutBusinessInfo"
+            layout="@layout/layout_show_more_show_less"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@id/textViewServiceName"
+            app:layout_constraintStart_toStartOf="@id/textViewServiceName"
+            app:layout_constraintTop_toBottomOf="@id/layoutTermsAndConditions" />
+
+        <include
+            android:id="@+id/layoutBusinessHours"
+            layout="@layout/layout_business_hours"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@id/layoutBusinessInfo"
+            app:layout_constraintStart_toStartOf="@id/layoutBusinessInfo"
+            app:layout_constraintTop_toBottomOf="@id/layoutBusinessInfo" />
+
+        <include
+            android:id="@+id/layoutContactUs"
+            layout="@layout/layout_contact_us"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@id/layoutBusinessHours"
+            app:layout_constraintStart_toStartOf="@id/layoutBusinessHours"
+            app:layout_constraintTop_toBottomOf="@id/layoutBusinessHours" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewMap"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@id/layoutContactUs"
+            app:layout_constraintStart_toStartOf="@id/layoutContactUs"
+            app:layout_constraintTop_toBottomOf="@id/layoutContactUs"
+            app:shapeAppearanceOverlay="@style/Widget.AppCompat.ShapeableImageView.CornerSize7"
+            app:srcCompat="@drawable/dummy_image_map_view" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewMapNavigatorBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewMap"
+            app:layout_constraintEnd_toEndOf="@id/imageViewMap"
+            app:srcCompat="@drawable/bg_map_icon" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewMapNavigator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewMapNavigatorBg"
+            app:layout_constraintEnd_toEndOf="@id/imageViewMapNavigatorBg"
+            app:layout_constraintStart_toStartOf="@id/imageViewMapNavigatorBg"
+            app:layout_constraintTop_toTopOf="@id/imageViewMapNavigatorBg"
+            app:srcCompat="@drawable/ic_map_navigator" />
+
+        <include
+            android:id="@+id/layoutAskQuestion"
+            layout="@layout/layout_ask_question"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@id/imageViewMap"
+            app:layout_constraintStart_toStartOf="@id/imageViewMap"
+            app:layout_constraintTop_toBottomOf="@id/imageViewMap" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/saleDealCards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="buttonSaleEnds, buttonItemsLeft, buttonBought" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

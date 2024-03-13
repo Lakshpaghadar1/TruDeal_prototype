@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#FD3100</color>
+    <color name="colorPrimaryOpacity5">#0DFD3100</color>
+    <color name="colorPrimaryOpacity10">#1AFD3100</color>
+    <color name="colorPrimaryDark">#FD3100</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+
+    <color name="gray">#7E879F</color>
+    <color name="navyBlue">#1D242C</color>
+    <color name="blue">#53F1DF</color>
+    <color name="C_66FFFFFF">#66FFFFFF</color>
+
+    <color name="C_FD3100">#FD3100</color>
+    <color name="C_C6C6C6">#C6C6C6</color>
+    <color name="C_F9F9F9">#F9F9F9</color>
+    <color name="C_F1F1F1">#F1F1F1</color>
+    <color name="C_0000001A">#0000001A</color>
+    <color name="C_A0A7AB">#A0A7AB</color>
+    <color name="C_E6E9EC">#E6E9EC</color>
+    <color name="C_ECECEC">#ECECEC</color>
+    <color name="C_4DECECEC">#4DECECEC</color>
+    <color name="C_3D405B">#3D405B</color>
+    <color name="C_ED1D26">#ED1D26</color>
+    <color name="C_1AED1D26">#1AED1D26</color>
+    <color name="C_33ED1D26">#33ED1D26</color>
+    <color name="C_E9E9E9">#E9E9E9</color>
+    <color name="C_9D9D9D">#9D9D9D</color>
+    <color name="C_D9D9D9">#D9D9D9</color>
+    <color name="C_A5A5A5">#A5A5A5</color>
+    <color name="C_149831">#149831</color>
+    <color name="C_DEDEDE">#DEDEDE</color>
+    <color name="C_8D8D8D">#8D8D8D</color>
+    <color name="C_808080">#808080</color>
+    <color name="C_1A808080">#1A808080</color>
+    <color name="C_3CDB22">#3CDB22</color>
+    <color name="C_0D263B">#0D263B</color>
+    <color name="C_6F6DCA">#6F6DCA</color>
+    <color name="C_6F6F6F">#6F6F6F</color>
+    <color name="C_49B160">#49B160</color>
+    <color name="C_990A9C">#990A9C</color>
+    <color name="C_0A8B9C">#0A8B9C</color>
+    <color name="C_94860A">#94860A</color>
+    <color name="C_616567">#616567</color>
+    <color name="C_DB594F">#DB594F</color>
+    <color name="C_009074">#009074</color>
+    <color name="C_E34900">#E34900</color>
+    <color name="C_EEEEFF">#EEEEFF</color>
+    <color name="C_80FFFFFF">#CCFFFFFF</color>
+    <color name="C_B7B7B7">#B7B7B7</color>
+    <color name="C_DFDFDF">#DFDFDF</color>
+    <color name="C_999999">#999999</color>
+    <color name="C_3361D0">#3361D0</color>
+    <color name="C_C4C4C4">#C4C4C4</color>
+    <color name="C_4D000000">#4D000000</color>
+    <color name="C_4DFFFFFF">#4DFFFFFF</color>
+    <color name="C_5C5C5C">#5C5C5C</color>
+    <color name="C_40C351">#40C351</color>
+    <color name="C_F3F3F3">#F3F3F3</color>
+    <color name="C_E2E2E2">#E2E2E2</color>
+    <color name="C_E7E7E7">#E7E7E7</color>
+    <color name="C_EDEDED">#EDEDED</color>
+    <color name="C_4D9D9D9D">#4D9D9D9D</color>
+    <color name="C_c4c4c4">#c4c4c4</color>
+    <color name="C_00A9DE">#00A9DE</color>
+    <color name="C_04D400">#04D400</color>
+    <color name="C_02C32C">#02C32C</color>
+    <color name="C_C361FF">#C361FF</color>
+    <color name="C_FFF3F0">#FFF3F0</color>
+    <color name="C_FBFBFB">#FBFBFB</color>
+    <color name="C_A7A7A7">#A7A7A7</color>
+    <color name="C_AFAFAF">#AFAFAF</color>
+    <color name="C_F8F8F8">#F8F8F8</color>
+    <color name="C_8F8F8F">#8F8F8F</color>
+    <color name="C_9C9C9C">#9C9C9C</color>
+    <color name="C_D3D3D3">#D3D3D3</color>
+    <color name="C_7D7D7D">#7D7D7D</color>
+    <color name="C_8C8C8C">#8C8C8C</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#DEDEDE</color>
+
+
+
+
+    <color name="roboto_calendar_background">#FFFFFF</color>
+    <color name="roboto_calendar_month_font">#000000</color>
+    <color name="roboto_calendar_day_of_the_week_font">#161d20</color>
+    <color name="roboto_calendar_selected_day_font">#FFFFFF</color>
+    <color name="roboto_calendar_selected_day_background">#ED1D26</color>
+    <color name="roboto_calendar_current_day_ring">#E2E2E2</color>
+    <color name="roboto_calendar_day_of_the_month_font">#000000</color>
+    <color name="roboto_calendar_day_of_the_month_font_non_accessible">#A3A0A0</color>
+    <color name="roboto_calendar_circle_1">#1D3497</color>
+    <color name="roboto_calendar_circle_2">#1D3497</color>
+    <color name="roboto_calendar_circle_3">#1D3497</color>
+    <color name="roboto_calendar_month_arrow">#000000</color>
+    <color name="appTheme">#82C701</color>
+    <color name="red">#FF1100</color>
+</resources>

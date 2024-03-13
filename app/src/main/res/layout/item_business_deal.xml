@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/C_ED1D26"
+        app:strokeWidth="@dimen/_1sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewHeading"
+                style="@style/SemiBold.10ssp.C_FFFFFF"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:background="@color/C_ED1D26"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_7sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Deal Name, 25% - 30% Discount" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewDeal"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dummy_image_beauty_and_spa_wax"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewHeading" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutSale"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewDeal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutStartSale"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    app:layout_constraintEnd_toStartOf="@id/viewDivider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewStartSaleDate"
+                        style="@style/Regular.8ssp.C_000000"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/label_start_sale_date"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewStartSaleDateIs"
+                        style="@style/SemiBold.10ssp.C_000000"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textViewStartSaleDate"
+                        tools:text="25 Dec 2022" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewStartSaleTimeIs"
+                        style="@style/SemiBold.10ssp.C_000000"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textViewStartSaleDateIs"
+                        tools:text="12:00 PM" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/viewDivider"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/dp_0"
+                    android:background="@color/C_ED1D26"
+                    app:layout_constraintBottom_toBottomOf="@id/constraintLayoutStartSale"
+                    app:layout_constraintEnd_toStartOf="@id/constraintLayoutEndSale"
+                    app:layout_constraintStart_toEndOf="@id/constraintLayoutStartSale"
+                    app:layout_constraintTop_toTopOf="@id/constraintLayoutStartSale" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutEndSale"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/viewDivider"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewEndSaleDate"
+                        style="@style/Regular.8ssp.C_000000"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/label_start_sale_date"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewEndSaleDateIs"
+                        style="@style/SemiBold.10ssp.C_000000"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textViewEndSaleDate"
+                        tools:text="25 Dec 2022" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewEndSaleTimeIs"
+                        style="@style/SemiBold.10ssp.C_000000"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textViewEndSaleDateIs"
+                        tools:text="12:00 PM" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutView"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutSale">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewViews"
+                    style="@style/SemiBold.10ssp.C_000000"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:drawableStart="@drawable/ic_eye"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/_10sdp"
+                    app:layout_constraintEnd_toStartOf="@id/textViewRedeems"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="101" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewRedeems"
+                    style="@style/SemiBold.10ssp.C_000000"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:drawableStart="@drawable/ic_dollar_redeems"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/_10sdp"
+                    app:layout_constraintEnd_toStartOf="@id/textViewShares"
+                    app:layout_constraintStart_toEndOf="@id/textViewViews"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="45" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewShares"
+                    style="@style/SemiBold.10ssp.C_000000"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:drawableStart="@drawable/ic_share_black"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/_20sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textViewRedeems"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="10" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewButtons"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/_15sdp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutView"
+                app:layout_constraintVertical_bias="@integer/int_0"
+                app:spanCount="@integer/int_4"
+                tools:itemCount="@integer/int_4"
+                tools:listitem="@layout/item_business_deal_buttons" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

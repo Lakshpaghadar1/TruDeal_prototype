@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/_2sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_phone"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewCountryCode"
+        style="@style/SemiBold.12ssp.C_000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:drawableEnd="@drawable/ic_down_arrow_black_small"
+        android:drawablePadding="@dimen/_5sdp"
+        android:elevation="@dimen/_2sdp"
+        android:text="+9"
+        app:layout_constraintBottom_toBottomOf="@id/editTextPhoneNumber"
+        app:layout_constraintStart_toEndOf="@id/imageViewPhone"
+        app:layout_constraintTop_toTopOf="@id/editTextPhoneNumber" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextPhoneNumber"
+        style="@style/AuthEditTextStyle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="start"
+        android:hint="@string/hint_phone_number"
+        android:inputType="number"
+        android:maxLength="@integer/int_phone_number_max_length"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewCountryCode"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/viewBottomLine"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:background="@color/edittext_line_color_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhoneNumber"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:layout_margin="@dimen/_15sdp"
+    android:background="@drawable/bg_chat_reply"
+    android:minWidth="@dimen/_45sdp"
+    android:padding="@dimen/_3sdp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/replyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/C_E7E7E7">
+
+            <View
+                android:id="@+id/imageLine"
+                android:layout_width="@dimen/_4sdp"
+                android:layout_height="@dimen/dp_0"
+                android:background="@color/C_ED1D26"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name"
+                style="@style/SemiBold.9ssp.C_ED1D26"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:text="Receiver"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageLine"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/cancelButton"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:background="@drawable/ic_close_black"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textQuotedMessage"
+                style="@style/Regular.11ssp.C_000000"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/name"
+                app:layout_constraintStart_toStartOf="@id/name"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                tools:text="Can I come over?" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/emojis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:src="@drawable/ic_emojis"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/replyLayout" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_message"
+        style="@style/Regular.11ssp.C_000000"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_0"
+        android:background="@android:color/transparent"
+        android:hint="@string/hint_say_something"
+        android:imeOptions="flagNoExtractUi|actionSend"
+        android:inputType="textMultiLine|textCapSentences|textShortMessage"
+        android:maxLength="2000"
+        android:maxLines="5"
+        android:minHeight="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_2sdp"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        android:textColorHint="@color/C_9D9D9D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sendButton"
+        app:layout_constraintStart_toEndOf="@id/emojis"
+        app:layout_constraintTop_toBottomOf="@+id/replyLayout"
+        tools:text="Hello" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/sendButton"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginVertical="@dimen/_3sdp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/ic_send"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_message"
+        app:layout_constraintTop_toTopOf="@+id/edit_message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
